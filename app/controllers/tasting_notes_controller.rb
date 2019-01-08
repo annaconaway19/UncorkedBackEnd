@@ -1,0 +1,2 @@
+class TastingNotesController < ApplicationController
+end

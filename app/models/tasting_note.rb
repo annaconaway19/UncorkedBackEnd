@@ -1,0 +1,2 @@
+class TastingNote < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class WineTastingNote < ApplicationRecord
+end
