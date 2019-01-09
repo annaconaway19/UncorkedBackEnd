@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  resources :varietals
-  resources :wine_tasting_notes
-  resources :tasting_notes
-  resources :countries
-  resources :wines
+
+  resources :countries, only: [:index, :show, :create]
+  resources :wines, only: [:index, :show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
