@@ -43,13 +43,13 @@ ActiveRecord::Schema.define(version: 2019_01_08_230752) do
   end
 
   create_table "wines", force: :cascade do |t|
-    t.string "name"
-    t.string "winery"
     t.string "vintage"
-    t.string "price"
-    t.integer "points"
     t.integer "country_id"
+    t.integer "points"
+    t.string "price"
+    t.string "name"
     t.integer "varietal_id"
+    t.string "winery"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
