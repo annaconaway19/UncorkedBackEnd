@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 2019_01_08_230752) do
 
   create_table "varietals", force: :cascade do |t|
     t.string "name"
-    t.integer "wine_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

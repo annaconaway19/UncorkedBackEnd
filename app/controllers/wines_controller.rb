@@ -8,7 +8,6 @@ class WinesController < ApplicationController
     render json: Wine.find(params[:id])
   end
 
-
   private
 
   def wine_params
