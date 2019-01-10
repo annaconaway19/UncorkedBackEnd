@@ -1,7 +1,7 @@
 class WinesController < ApplicationController
 
   def index
-    render json: Wine.all
+    render json: simple_query(params[:id])
   end
 
   def show
@@ -9,6 +9,11 @@ class WinesController < ApplicationController
   end
 
   private
+
+  def simple_query(query)
+    Wine.where(query).limit(5000)
+  end
+
 
   def wine_params
     params.require(:wine).permit(:vintage, :name, :country_id, :points, :price, :varietal_id, :winery)
