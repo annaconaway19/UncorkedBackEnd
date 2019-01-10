@@ -17,7 +17,6 @@ class WinesController < ApplicationController
     #   "prev_page_url": `http://localhost:3001/#{current_page - 1}`,
     # }
       paginate Wine.unscoped, per_page: 20
-    end
   end
 
   def show
