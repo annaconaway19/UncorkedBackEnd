@@ -32,7 +32,7 @@ class CountriesController < ApplicationController
   private
 
   def country_params
-    params.require(:country).permit(:name, :bio, :alphacode)
+    params.require(:country).permit(:name, :bio, :alphacode, :longitude, :latitude)
   end
 
 end
