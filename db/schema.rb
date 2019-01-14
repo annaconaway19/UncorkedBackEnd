@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 2019_01_08_230752) do
     t.string "bio"
     t.string "img_url"
     t.string "alphacode"
-    t.decimal "longitude"
-    t.decimal "latitude"
+    t.string "longitude"
+    t.string "latitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

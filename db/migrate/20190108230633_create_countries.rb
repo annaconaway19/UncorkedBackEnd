@@ -5,8 +5,8 @@ class CreateCountries < ActiveRecord::Migration[5.2]
       t.string :bio
       t.string :img_url
       t.string :alphacode
-      t.decimal :longitude
-      t.decimal :latitude
+      t.string :longitude
+      t.string :latitude
       t.timestamps
     end
   end
