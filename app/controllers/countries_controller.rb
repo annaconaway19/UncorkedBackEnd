@@ -13,16 +13,18 @@ class CountriesController < ApplicationController
     # pagination = {
     #   "current_page": current_page,
     #   "last_page": total_pages,
-    #   "next_page_url": `http://localhost:3001/countries?page[number]=#{current_page + 1}`,
-    #   "prev_page_url": `http://localhost:3001/countries?page[number]=#{current_page - 1}`,
+    #   "next_page_url": `http://localhost:3001/countries?page[:number]=#{current_page + 1}`,
+    #   "prev_page_url": `http://localhost:3001/countries?page[:number]=#{current_page - 1}`,
     # }
-    
-      render json: Country.all
+    #
+    # render json: {countries: countries, pagination: pagination}
+    render json: Country.all
   end
 
   def show
-    render json: Country.find(params[:id])
+    render json: Country.find(params[:id]).to_json(:include => :wines)
   end
+
 
   private
 
