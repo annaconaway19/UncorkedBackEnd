@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get '/wines/:search', to: 'wines#search'
+  get '/wine/:id', to: 'wines#show'
 
   resources :countries, only: [:index, :show, :create]
   resources :varietals, only: [:index]

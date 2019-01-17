@@ -6,14 +6,16 @@ class WinesController < ApplicationController
   end
 
   def search
-    if params[:search]
-      wines = Wine.select { |w| w.name.include?(params[:search]) }
-      # byebug
-      paginate Wine.where(id: wines.map(&:id)), per_page: 20
+   if params[:search]
+     wines = Wine.select { |w| w.name.include?(params[:search]) }
+      if wines.empty?
 
-      # paginate Wine.unscoped.select { |w| w.name.include?(params[:search]) }, per_page: 20
-    end
-  end
+        paginate Wine, per_page: 20
+      else
+        paginate Wine.where(id: wines.map(&:id)), per_page: 20
+      end
+   end
+ end
 
   def show
     render json: Wine.find(params[:id])
