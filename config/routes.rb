@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   get '/wines/:search', to: 'wines#search'
   get '/wine/:id', to: 'wines#show'
   get '/profile', to: 'users#profile'
+  get '/wishlist', to: 'wishlists#index'
+  get '/dranklist', to: 'dranklists#index'
 
-  resources :drank_lists, only: [:index]
-  resources :wish_lists, only: [:index]
   resources :users
   resources :countries, only: [:index, :show, :create]
   resources :varietals, only: [:index]

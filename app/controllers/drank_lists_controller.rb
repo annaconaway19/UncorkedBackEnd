@@ -1,2 +1,0 @@
-class DrankListsController < ApplicationController
-end
