@@ -5,8 +5,7 @@ class Wine < ApplicationRecord
 
   belongs_to :varietal
   belongs_to :country
-  belongs_to :user, through: :dranklist
-  belongs_to :user, through: :wishlist
+
 
   # import the data from our CSV file.
   def self.my_import(file)
