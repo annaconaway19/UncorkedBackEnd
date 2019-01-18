@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 Varietal.my_import('./data/varietals.csv')
 
 country1 = Country.create(name: 'Argentina', bio: "'Argentine winemaking began in the later half of the 16th century when the Spanish missionaries and conquistadors brought vines with them from Spain. Some of these vines ended up in Peru, Chile and the United States. Some (thankfully for wine lovers) ended up in Argentina. Although these vines were high in production, the wines that these grapes produced were far from spectacular; the most popular varietal, Criolla, produced a very crude wine, yet this grape served as the foundation for the South American wine industry for over 300 years.To understand Argentine wines, one must try a Malbec from Mendoza and a Torrontes from Salta: these are the two main grapes of Argentina and thrive there better than they do in any other part of the world.' -Sedimentality", img_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Argentine_wine_regions.jpg/350px-Argentine_wine_regions.jpg", alphacode: "ARG", latitude: '-34', longitude: '-64')
