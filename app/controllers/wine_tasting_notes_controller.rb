@@ -1,2 +1,0 @@
-class WineTastingNotesController < ApplicationController
-end

@@ -112,3 +112,9 @@ tn61 = TastingNote.create(name: "Truffles")
 
 Wine.my_import('./data/Wines.csv')
 user1 = User.create(username: 'anna', password: '123')
+
+wish1 = WineWish.create(user_id: 1, wine_id: 234)
+wish2 = WineWish.create(user_id: 1, wine_id: 9863)
+wish3 = WineWish.create(user_id: 1, wine_id: 3098)
+tasted1 = TastedWine.create(user_id: 1, wine_id: 34)
+tasted2 = TastedWine.create(user_id: 1, wine_id: 897)

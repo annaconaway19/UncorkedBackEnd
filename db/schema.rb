@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_18_155919) do
+ActiveRecord::Schema.define(version: 2019_01_18_195915) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 2019_01_18_155919) do
     t.string "alphacode"
     t.string "longitude"
     t.string "latitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tasted_wines", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "wine_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -48,6 +55,13 @@ ActiveRecord::Schema.define(version: 2019_01_18_155919) do
   create_table "wine_tasting_notes", force: :cascade do |t|
     t.integer "wine_id"
     t.integer "tasting_note_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "wine_wishes", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "wine_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
