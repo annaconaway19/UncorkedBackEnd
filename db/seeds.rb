@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+user1 = User.create(username: "user1", password: "pw1")
 
 Varietal.my_import('./data/varietals.csv')
 
@@ -111,7 +112,6 @@ tn60 = TastingNote.create(name: "Grapefruit")
 tn61 = TastingNote.create(name: "Truffles")
 
 Wine.my_import('./data/Wines.csv')
-user1 = User.create(username: 'anna', password: '123')
 
 wish1 = WineWish.create(user_id: 1, wine_id: 234)
 wish2 = WineWish.create(user_id: 1, wine_id: 9863)

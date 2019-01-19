@@ -5,7 +5,7 @@ class Api::V1::AuthController < ApplicationController
     if @user && @user.authenticate(params[:password])
       render json: {
         message: "correct username and password",
-        reader_info: @user,
+        user_info: @user,
         error: false,
         token: encode({user_id: @user.id})
         }, status: :accepted
