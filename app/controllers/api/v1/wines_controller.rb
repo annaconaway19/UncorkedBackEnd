@@ -1,5 +1,5 @@
 
-class WinesController < ApplicationController
+class Api::V1::WinesController < ApplicationController
 
   def index
       paginate Wine, per_page: 20

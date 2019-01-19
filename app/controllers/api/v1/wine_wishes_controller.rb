@@ -1,4 +1,4 @@
-class WineWishesController < ApplicationController
+class Api::V1::WineWishesController < ApplicationController
 
   def index
     render json: WineWish.all

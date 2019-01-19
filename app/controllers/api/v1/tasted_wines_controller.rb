@@ -1,4 +1,4 @@
-class TastedWinesController < ApplicationController
+class Api::V1::TastedWinesController < ApplicationController
   def index
     render json: TastedWine.all
   end

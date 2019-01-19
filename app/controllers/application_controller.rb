@@ -1,5 +1,3 @@
-require 'jwt'
-
 class ApplicationController < ActionController::API
 
   def secret_key
@@ -7,11 +5,11 @@ class ApplicationController < ActionController::API
   end
 
   def encode(payload)
-    JWT.encode(payload, secret_key, 'HS256')
+    JWT.encode(payload, secret_key)
   end
 
   def decode(token)
-    JWT.decode(token, secret_key, true, {algorithm: 'HS256'})[0]
+    JWT.decode(token, secret_key, true)[0]
   end
 
 end
