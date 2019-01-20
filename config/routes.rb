@@ -12,7 +12,6 @@ Rails.application.routes.draw do
       post '/signup', to: 'users#create'
 
 
-
       resources :countries, only: [:index, :show, :create]
       resources :varietals, only: [:index]
 
