@@ -4,6 +4,10 @@ class Api::V1::WineWishesController < ApplicationController
     render json: WineWish.all
   end
 
+  def create
+    render json: WineWish.create(wine_wish_params)
+  end
+  
   private
 
   def wine_wish_params

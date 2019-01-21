@@ -3,6 +3,10 @@ class Api::V1::TastedWinesController < ApplicationController
     render json: TastedWine.all
   end
 
+  def create
+    render json: TastedWine.create(tasted_wine_params)
+  end
+
   private
 
   def tasted_wine_params
